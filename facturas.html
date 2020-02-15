@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lista de compra</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='facturas.css'>
+</head>
+ 
+<body>
+    <div>
+        <h3>Introducción de productos en la factura</h3>
+        <p id="p1">date</p>
+        <label for="producto">Producto:</label>
+        <input type="text" id="producto" />
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" value="0" />
+        <label for="precio-unitario">Precio unitario:</label>
+        <input type="number" id="precio-unitario" value="0" />
+        <button id="agrega" onclick="guardar()">Agregar</button>
+    </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Precio total</th>
+                </tr>
+            </thead>
+
+
+            <tbody id="tabla">
+            </tbody>
+
+
+            <tfoot>
+                <tr>
+                    <th colspan="3">Base imponible</th>
+                    <th><span id="base-imponible">0</span>€</th>
+                </tr>
+                <tr>
+                    <th colspan="3" data-iva="0.21">IVA 21%</th>
+                    <th><span id="iva">0</span>€</th>
+                </tr>
+                <tr>
+                    <th colspan="3">Total factura</th>
+                    <th><span id="total">0</span>€</th>
+                </tr>
+            </tfoot>
+        </table>
+    <script src='facturas.js'></script>
+</body>
+
+</html>
